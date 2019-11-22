@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="044538_44625_6A.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mWy-dz-WVH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="mWy-dz-WVH">
                                 <rect key="frame" x="0.0" y="75" width="375" height="307"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6g-JM-B8d">
@@ -52,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="044538_44625_6A.jpg" width="712" height="534"/>
+        <image name="1.jpeg" width="1080" height="1440"/>
     </resources>
 </document>

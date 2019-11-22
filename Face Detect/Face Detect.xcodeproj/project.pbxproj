@@ -17,11 +17,16 @@
 		4C0B672F237AE59500DD0A97 /* FaceModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C0B672E237AE59500DD0A97 /* FaceModel.mm */; };
 		4C0B6733237AE87300DD0A97 /* RFB-320.param in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B6731237AE87300DD0A97 /* RFB-320.param */; };
 		4C0B6734237AE87300DD0A97 /* RFB-320.bin in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B6732237AE87300DD0A97 /* RFB-320.bin */; };
-		4C0B6738237AEE7B00DD0A97 /* 044538_44625_6A.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B6737237AEE7B00DD0A97 /* 044538_44625_6A.jpg */; };
+		4C0B6738237AEE7B00DD0A97 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B6737237AEE7B00DD0A97 /* 4.jpg */; };
 		4C0B673A237BA10200DD0A97 /* openmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0B6739237BA10200DD0A97 /* openmp.framework */; };
-		4C0B673C237BA8A400DD0A97 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B673B237BA8A400DD0A97 /* 3.jpg */; };
 		4C0B6740237BAE0200DD0A97 /* slim_320.bin in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B673E237BAE0100DD0A97 /* slim_320.bin */; };
 		4C0B6741237BAE0200DD0A97 /* slim_320.param in Resources */ = {isa = PBXBuildFile; fileRef = 4C0B673F237BAE0100DD0A97 /* slim_320.param */; };
+		4C7D1FB0238678B80078BD71 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D1FAF238678B80078BD71 /* AVFoundation.framework */; };
+		4C7D1FB3238678E40078BD71 /* VideoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D1FB1238678E40078BD71 /* VideoViewController.mm */; };
+		4C7D1FB5238679B20078BD71 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D1FB4238679B10078BD71 /* CoreImage.framework */; };
+		4C7D1FBA23867CF30078BD71 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D1FB923867CF30078BD71 /* CoreMedia.framework */; };
+		4C7D1FBC238686280078BD71 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D1FBB238686280078BD71 /* opencv2.framework */; };
+		4C7D1FC4238769270078BD71 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D1FC3238769270078BD71 /* 1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,11 +45,17 @@
 		4C0B672E237AE59500DD0A97 /* FaceModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceModel.mm; sourceTree = "<group>"; };
 		4C0B6731237AE87300DD0A97 /* RFB-320.param */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "RFB-320.param"; sourceTree = "<group>"; };
 		4C0B6732237AE87300DD0A97 /* RFB-320.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "RFB-320.bin"; sourceTree = "<group>"; };
-		4C0B6737237AEE7B00DD0A97 /* 044538_44625_6A.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 044538_44625_6A.jpg; sourceTree = "<group>"; };
+		4C0B6737237AEE7B00DD0A97 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		4C0B6739237BA10200DD0A97 /* openmp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openmp.framework; sourceTree = "<group>"; };
-		4C0B673B237BA8A400DD0A97 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		4C0B673E237BAE0100DD0A97 /* slim_320.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = slim_320.bin; sourceTree = "<group>"; };
 		4C0B673F237BAE0100DD0A97 /* slim_320.param */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = slim_320.param; sourceTree = "<group>"; };
+		4C7D1FAF238678B80078BD71 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4C7D1FB1238678E40078BD71 /* VideoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoViewController.mm; sourceTree = "<group>"; };
+		4C7D1FB2238678E40078BD71 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		4C7D1FB4238679B10078BD71 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		4C7D1FB923867CF30078BD71 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4C7D1FBB238686280078BD71 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		4C7D1FC3238769270078BD71 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +63,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7D1FBC238686280078BD71 /* opencv2.framework in Frameworks */,
+				4C7D1FBA23867CF30078BD71 /* CoreMedia.framework in Frameworks */,
+				4C7D1FB5238679B20078BD71 /* CoreImage.framework in Frameworks */,
+				4C7D1FB0238678B80078BD71 /* AVFoundation.framework in Frameworks */,
 				4C0B673A237BA10200DD0A97 /* openmp.framework in Frameworks */,
 				4C0B672C237AE57300DD0A97 /* ncnn.framework in Frameworks */,
 			);
@@ -65,6 +80,7 @@
 			children = (
 				4C0B6714237AE55400DD0A97 /* Face Detect */,
 				4C0B6713237AE55400DD0A97 /* Products */,
+				4C7D1FA4238671510078BD71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +95,13 @@
 		4C0B6714237AE55400DD0A97 /* Face Detect */ = {
 			isa = PBXGroup;
 			children = (
+				4C7D1FC3238769270078BD71 /* 1.jpeg */,
+				4C7D1FBB238686280078BD71 /* opencv2.framework */,
+				4C7D1FB2238678E40078BD71 /* VideoViewController.h */,
+				4C7D1FB1238678E40078BD71 /* VideoViewController.mm */,
 				4C0B673D237BAE0100DD0A97 /* version-slim */,
-				4C0B673B237BA8A400DD0A97 /* 3.jpg */,
 				4C0B6739237BA10200DD0A97 /* openmp.framework */,
-				4C0B6737237AEE7B00DD0A97 /* 044538_44625_6A.jpg */,
+				4C0B6737237AEE7B00DD0A97 /* 4.jpg */,
 				4C0B6730237AE87300DD0A97 /* version-RFB */,
 				4C0B672B237AE57300DD0A97 /* ncnn.framework */,
 				4C0B6715237AE55400DD0A97 /* AppDelegate.h */,
@@ -116,6 +135,16 @@
 				4C0B673F237BAE0100DD0A97 /* slim_320.param */,
 			);
 			path = "version-slim";
+			sourceTree = "<group>";
+		};
+		4C7D1FA4238671510078BD71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D1FB923867CF30078BD71 /* CoreMedia.framework */,
+				4C7D1FB4238679B10078BD71 /* CoreImage.framework */,
+				4C7D1FAF238678B80078BD71 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,11 +207,11 @@
 				4C0B6733237AE87300DD0A97 /* RFB-320.param in Resources */,
 				4C0B6722237AE55700DD0A97 /* LaunchScreen.storyboard in Resources */,
 				4C0B6741237BAE0200DD0A97 /* slim_320.param in Resources */,
-				4C0B6738237AEE7B00DD0A97 /* 044538_44625_6A.jpg in Resources */,
+				4C0B6738237AEE7B00DD0A97 /* 4.jpg in Resources */,
+				4C7D1FC4238769270078BD71 /* 1.jpeg in Resources */,
 				4C0B6734237AE87300DD0A97 /* RFB-320.bin in Resources */,
 				4C0B6740237BAE0200DD0A97 /* slim_320.bin in Resources */,
 				4C0B671F237AE55700DD0A97 /* Assets.xcassets in Resources */,
-				4C0B673C237BA8A400DD0A97 /* 3.jpg in Resources */,
 				4C0B671D237AE55400DD0A97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7D1FB3238678E40078BD71 /* VideoViewController.mm in Sources */,
 				4C0B671A237AE55400DD0A97 /* ViewController.mm in Sources */,
 				4C0B6725237AE55700DD0A97 /* main.m in Sources */,
 				4C0B672F237AE59500DD0A97 /* FaceModel.mm in Sources */,
@@ -347,8 +377,10 @@
 					"$(PROJECT_DIR)/Face\\ Detect",
 					"$(PROJECT_DIR)/Face\\ Detect",
 					"$(PROJECT_DIR)/Face\\ Detect",
+					"$(PROJECT_DIR)/Face\\ Detect",
 				);
 				INFOPLIST_FILE = "Face Detect/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,12 +403,15 @@
 					"$(PROJECT_DIR)/Face\\ Detect",
 					"$(PROJECT_DIR)/Face\\ Detect",
 					"$(PROJECT_DIR)/Face\\ Detect",
+					"$(PROJECT_DIR)/Face\\ Detect",
 				);
 				INFOPLIST_FILE = "Face Detect/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "ianwong.Sunyard.com.Face-Detect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

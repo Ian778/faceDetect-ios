@@ -9,15 +9,13 @@
 
 #import "ViewController.h"
 #import "FaceModel.h"
+#import "VideoViewController.h"
 
+#import <AVFoundation/AVFoundation.h>
 
-
-
-@interface ViewController ()
+@interface ViewController ()<bankCardVideoControllerDelegate>
 @property (strong, nonatomic) FaceModel *faceModel;
-
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
 @property (weak, nonatomic) IBOutlet UIButton *runButton;
 
 @end
@@ -36,7 +34,9 @@
     [super viewDidLoad];
     
     std::vector<FaceInfo> face_info;
-    UIImage *image = [UIImage imageNamed:@"3.jpg"];
+    UIImage *image = [UIImage imageNamed:@"1.jpeg"];
+    cv::Mat imgMat;
+    UIImageToMat(image, imgMat);
     face_info = [self.faceModel detectImg:image];
     CGSize imageSize = [image size];
     UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
@@ -49,38 +49,26 @@
     CGContextSetLineWidth(context, 2.0f);
     CGContextStrokePath(context);
     if(face_info.size() > 0){
-        
         for (int i = 0; i < face_info.size(); i++) {
             auto face = face_info[i];
+            NSLog(@"x1 = %f, x2 = %f",face.x1,face.x2);
             CGContextAddRect(context, CGRectMake(face.x1, face.y1, face.x2 - face.x1, face.y2-face.y1));
             CGContextDrawPath(context, kCGPathStroke);
-
         }
     }
-    self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();;
-   
+    self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    
 }
 - (IBAction)run:(id)sender {
     
-    
-    //视频识别
-//    std::vector<FaceInfo> face_info;
-//    UIImage *image = [UIImage imageNamed:@"3.jpg"];
-//    face_info = [_faceModel detectImg:image];
-//    cv::Mat mat;
-//    UIImageToMat(image, mat);
-//    if(face_info.size() > 0){
-//
-//        for (int i = 0; i < face_info.size(); i++) {
-//            auto face = face_info[i];
-//            cv::Point pt1(face.x1, face.y1);
-//            cv::Point pt2(face.x2, face.y2);
-//            cv::rectangle(mat, pt1, pt2, cv::Scalar(0, 255, 0), 2);
-//        }
-//    }
-//    image = MatToUIImage(mat);
-//    self.imageView.image = image;
+    NSLog(@"video ======");
+    VideoViewController *conttroller = [[VideoViewController alloc]init];
+    conttroller.delegate = self;
+    [self presentViewController:conttroller animated:YES completion:nil];
 }
 
+- (void)videoDidGetOneFrameToImage:(UIImage *)image{
+    self.imageView.image = image;
+}
 
 @end

@@ -9,11 +9,6 @@
 #import "FaceModel.h"
 #import <ncnn/ncnn/net.h>
 
-
-
-
-
-
 #define clip(x, y) (x < 0 ? 0 : (x > y ? y : x))
 #define hard_nms 1
 #define blending_nms 2
@@ -54,6 +49,7 @@ int image_h;
     std::vector<FaceInfo> face_info;
     image_w = image.size.width;
     image_h = image.size.height;
+     NSLog(@"input_w == %d, input_h == %d",image_w,image_h);
     if(image != nullptr){
         unsigned char* rgba = new unsigned char[image_w*image_h*4];
         {
@@ -66,6 +62,7 @@ int image_h;
         }
         ncnn::Mat inputMat = ncnn::Mat::from_pixels_resize(rgba, ncnn::Mat::PIXEL_RGBA2RGB, image_w, image_h, 320, 240);
         inputMat.substract_mean_normalize(mean_vals, norm_vals);
+       
         if([self loadModel]){
             ncnn::Extractor ex = faceNet.create_extractor();
             ex.set_num_threads(4);
