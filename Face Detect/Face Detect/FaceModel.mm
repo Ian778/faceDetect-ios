@@ -19,8 +19,8 @@ const float iou_threshold = 0.35;
 const float score_threshold = 0.7;
 
 
-int image_w;
-int image_h;
+static int image_w;
+static int image_h;
 
 @implementation FaceModel
 

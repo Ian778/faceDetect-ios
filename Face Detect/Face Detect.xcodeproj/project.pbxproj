@@ -25,8 +25,14 @@
 		4C7D1FB3238678E40078BD71 /* VideoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D1FB1238678E40078BD71 /* VideoViewController.mm */; };
 		4C7D1FB5238679B20078BD71 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D1FB4238679B10078BD71 /* CoreImage.framework */; };
 		4C7D1FBA23867CF30078BD71 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D1FB923867CF30078BD71 /* CoreMedia.framework */; };
-		4C7D1FBC238686280078BD71 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7D1FBB238686280078BD71 /* opencv2.framework */; };
 		4C7D1FC4238769270078BD71 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D1FC3238769270078BD71 /* 1.jpeg */; };
+		4C7D1FCC238C1EEE0078BD71 /* FaceRegModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D1FCB238C1EEE0078BD71 /* FaceRegModel.mm */; };
+		4C7D1FD2238CABC10078BD71 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D1FD1238CABC10078BD71 /* face.png */; };
+		4C7D1FD5238CB3EB0078BD71 /* mobilefacenet.bin in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D1FD3238CB3EB0078BD71 /* mobilefacenet.bin */; };
+		4C7D1FD6238CB3EB0078BD71 /* mobilefacenet.param in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D1FD4238CB3EB0078BD71 /* mobilefacenet.param */; };
+		4C7D1FDC238CB9720078BD71 /* face1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D1FD9238CB9720078BD71 /* face1.png */; };
+		4C7D1FDD238CB9720078BD71 /* IanWong1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D1FDA238CB9720078BD71 /* IanWong1.png */; };
+		4C7D1FDE238CB9720078BD71 /* IanWong.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D1FDB238CB9720078BD71 /* IanWong.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +60,15 @@
 		4C7D1FB2238678E40078BD71 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		4C7D1FB4238679B10078BD71 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		4C7D1FB923867CF30078BD71 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		4C7D1FBB238686280078BD71 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
-		4C7D1FC3238769270078BD71 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		4C7D1FC3238769270078BD71 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpeg; path = ../1.jpeg; sourceTree = "<group>"; };
+		4C7D1FC8238C1E960078BD71 /* FaceRegModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceRegModel.h; sourceTree = "<group>"; };
+		4C7D1FCB238C1EEE0078BD71 /* FaceRegModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceRegModel.mm; sourceTree = "<group>"; };
+		4C7D1FD1238CABC10078BD71 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
+		4C7D1FD3238CB3EB0078BD71 /* mobilefacenet.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = mobilefacenet.bin; sourceTree = "<group>"; };
+		4C7D1FD4238CB3EB0078BD71 /* mobilefacenet.param */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mobilefacenet.param; sourceTree = "<group>"; };
+		4C7D1FD9238CB9720078BD71 /* face1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face1.png; sourceTree = "<group>"; };
+		4C7D1FDA238CB9720078BD71 /* IanWong1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IanWong1.png; sourceTree = "<group>"; };
+		4C7D1FDB238CB9720078BD71 /* IanWong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IanWong.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C7D1FBC238686280078BD71 /* opencv2.framework in Frameworks */,
 				4C7D1FBA23867CF30078BD71 /* CoreMedia.framework in Frameworks */,
 				4C7D1FB5238679B20078BD71 /* CoreImage.framework in Frameworks */,
 				4C7D1FB0238678B80078BD71 /* AVFoundation.framework in Frameworks */,
@@ -95,13 +107,11 @@
 		4C0B6714237AE55400DD0A97 /* Face Detect */ = {
 			isa = PBXGroup;
 			children = (
-				4C7D1FC3238769270078BD71 /* 1.jpeg */,
-				4C7D1FBB238686280078BD71 /* opencv2.framework */,
+				4C7D1FC7238C1D2D0078BD71 /* face_recg */,
 				4C7D1FB2238678E40078BD71 /* VideoViewController.h */,
 				4C7D1FB1238678E40078BD71 /* VideoViewController.mm */,
-				4C0B673D237BAE0100DD0A97 /* version-slim */,
+				4C0B673D237BAE0100DD0A97 /* face_detect */,
 				4C0B6739237BA10200DD0A97 /* openmp.framework */,
-				4C0B6737237AEE7B00DD0A97 /* 4.jpg */,
 				4C0B6730237AE87300DD0A97 /* version-RFB */,
 				4C0B672B237AE57300DD0A97 /* ncnn.framework */,
 				4C0B6715237AE55400DD0A97 /* AppDelegate.h */,
@@ -115,6 +125,8 @@
 				4C0B6724237AE55700DD0A97 /* main.m */,
 				4C0B672D237AE59500DD0A97 /* FaceModel.h */,
 				4C0B672E237AE59500DD0A97 /* FaceModel.mm */,
+				4C7D1FCB238C1EEE0078BD71 /* FaceRegModel.mm */,
+				4C7D1FC8238C1E960078BD71 /* FaceRegModel.h */,
 			);
 			path = "Face Detect";
 			sourceTree = "<group>";
@@ -128,13 +140,15 @@
 			path = "version-RFB";
 			sourceTree = "<group>";
 		};
-		4C0B673D237BAE0100DD0A97 /* version-slim */ = {
+		4C0B673D237BAE0100DD0A97 /* face_detect */ = {
 			isa = PBXGroup;
 			children = (
+				4C7D1FC3238769270078BD71 /* 1.jpeg */,
+				4C0B6737237AEE7B00DD0A97 /* 4.jpg */,
 				4C0B673E237BAE0100DD0A97 /* slim_320.bin */,
 				4C0B673F237BAE0100DD0A97 /* slim_320.param */,
 			);
-			path = "version-slim";
+			path = face_detect;
 			sourceTree = "<group>";
 		};
 		4C7D1FA4238671510078BD71 /* Frameworks */ = {
@@ -145,6 +159,19 @@
 				4C7D1FAF238678B80078BD71 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C7D1FC7238C1D2D0078BD71 /* face_recg */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D1FD9238CB9720078BD71 /* face1.png */,
+				4C7D1FDB238CB9720078BD71 /* IanWong.png */,
+				4C7D1FDA238CB9720078BD71 /* IanWong1.png */,
+				4C7D1FD1238CABC10078BD71 /* face.png */,
+				4C7D1FD3238CB3EB0078BD71 /* mobilefacenet.bin */,
+				4C7D1FD4238CB3EB0078BD71 /* mobilefacenet.param */,
+			);
+			path = face_recg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,13 +232,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0B6733237AE87300DD0A97 /* RFB-320.param in Resources */,
+				4C7D1FDE238CB9720078BD71 /* IanWong.png in Resources */,
 				4C0B6722237AE55700DD0A97 /* LaunchScreen.storyboard in Resources */,
+				4C7D1FDD238CB9720078BD71 /* IanWong1.png in Resources */,
+				4C7D1FD2238CABC10078BD71 /* face.png in Resources */,
 				4C0B6741237BAE0200DD0A97 /* slim_320.param in Resources */,
+				4C7D1FD6238CB3EB0078BD71 /* mobilefacenet.param in Resources */,
 				4C0B6738237AEE7B00DD0A97 /* 4.jpg in Resources */,
 				4C7D1FC4238769270078BD71 /* 1.jpeg in Resources */,
 				4C0B6734237AE87300DD0A97 /* RFB-320.bin in Resources */,
 				4C0B6740237BAE0200DD0A97 /* slim_320.bin in Resources */,
 				4C0B671F237AE55700DD0A97 /* Assets.xcassets in Resources */,
+				4C7D1FD5238CB3EB0078BD71 /* mobilefacenet.bin in Resources */,
+				4C7D1FDC238CB9720078BD71 /* face1.png in Resources */,
 				4C0B671D237AE55400DD0A97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +261,7 @@
 				4C0B6725237AE55700DD0A97 /* main.m in Sources */,
 				4C0B672F237AE59500DD0A97 /* FaceModel.mm in Sources */,
 				4C0B6717237AE55400DD0A97 /* AppDelegate.m in Sources */,
+				4C7D1FCC238C1EEE0078BD71 /* FaceRegModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 
 #import "VideoViewController.h"
 #import "FaceModel.h"
+#import "FaceRegModel.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreImage/CoreImage.h>
 #import <UIKit/UIKit.h>
@@ -23,6 +24,8 @@
 @property (strong, nonatomic) dispatch_queue_t queue;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 @property (strong, nonatomic) FaceModel *faceModel;
+@property (strong, nonatomic) FaceRegModel *faceRegModel;
+
 
 @end
 
@@ -37,6 +40,13 @@
     return _faceModel;
 }
 
+
+- (FaceRegModel *)faceRegModel{
+    if(!_faceRegModel){
+        _faceRegModel = [FaceRegModel new];
+    }
+    return _faceRegModel;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

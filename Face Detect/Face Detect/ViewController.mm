@@ -10,11 +10,12 @@
 #import "ViewController.h"
 #import "FaceModel.h"
 #import "VideoViewController.h"
-
+#import "FaceRegModel.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()<bankCardVideoControllerDelegate>
 @property (strong, nonatomic) FaceModel *faceModel;
+@property (strong, nonatomic) FaceRegModel  *faceRegModel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *runButton;
 
@@ -29,14 +30,48 @@
     return _faceModel;
 }
 
+- (FaceRegModel *)faceRegModel{
+    if(!_faceRegModel){
+        _faceRegModel = [FaceRegModel new];
+    }
+    return _faceRegModel;
+}
 
+
+static double calculSimilar(std::vector<float>& v1, std::vector<float>& v2)
+{
+    assert(v1.size() == v2.size());
+    double ret = 0.0, mod1 = 0.0, mod2 = 0.0,dis;
+    for (std::vector<float>::size_type i = 0; i != v1.size(); ++i)
+    {
+        ret += v1[i] * v2[i];
+        mod1 += v1[i] * v1[i];
+        mod2 += v2[i] * v2[i];
+    }
+    dis = (ret / sqrt(mod1) / sqrt(mod2) + 1) / 2.0;
+    NSLog(@"dis is %f",dis);
+    return dis;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *face = [UIImage imageNamed:@"IanWong.png"];
+    std::vector<float> features;
+    features = [self.faceRegModel detectImg:face];
+    
+    UIImage *face1 = [UIImage imageNamed:@"IanWong1.png"];
+    std::vector<float> features1;
+    features1 = [self.faceRegModel detectImg:face1];
+    
+    
+    if(calculSimilar(features, features1) > 0.8){
+        NSLog(@"the same pserson");
+    }
+    
+    
+    
     
     std::vector<FaceInfo> face_info;
     UIImage *image = [UIImage imageNamed:@"1.jpeg"];
-    cv::Mat imgMat;
-    UIImageToMat(image, imgMat);
     face_info = [self.faceModel detectImg:image];
     CGSize imageSize = [image size];
     UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
@@ -59,6 +94,8 @@
     self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
     
 }
+
+
 - (IBAction)run:(id)sender {
     
     NSLog(@"video ======");
