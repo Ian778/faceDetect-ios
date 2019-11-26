@@ -4,5 +4,12 @@ fast face detect
 
 # todo list  
 
-1.add video input detect
+1.add video input detect    √
+
+2.add face recognize        √
+
+3. face landmarks detect
+
+3. face align  
+
 
